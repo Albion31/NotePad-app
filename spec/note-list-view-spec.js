@@ -32,3 +32,14 @@ function test_eleven(){
 };
 
 test_eleven();
+
+function test_sixteen(){
+  console.log('hello, ed');
+  var notelist = new NoteList();
+  var view = new View(notelist);
+  notelist.createAndAddNote('LLLLLLLLLLLLLLLLLLLLEFJKAESNVKAW')
+  console.log(view.returnHTML())
+  assert.isTrue(view.returnHTML() === '<ul><li><div>LLLLLLLLLLLLLLLLLLLL</div></li></ul>', 'Will show only the first 20 characters of each notes ')
+};
+
+test_sixteen();
